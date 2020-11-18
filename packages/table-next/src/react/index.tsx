@@ -1,4 +1,9 @@
 import {
+  SortAscIcon,
+  SortDescIcon,
+  SortIcon
+} from '@pluralsight/ps-design-system-icon'
+import {
   names as themeNames,
   useTheme
 } from '@pluralsight/ps-design-system-theme'
@@ -7,7 +12,7 @@ import { compose, css } from 'glamor'
 import React from 'react'
 
 import stylesheet from '../css'
-import { aligns } from '../vars'
+import { aligns, sorts } from '../vars'
 
 const styles = {
   table: (themeName: ValueOf<typeof themeNames>) =>
@@ -58,8 +63,23 @@ const TableHead: React.FC<HTMLPropsFor<'thead'>> = props => {
 }
 TableHead.displayName = 'Table.Head'
 
-const TableHeader: React.FC<HTMLPropsFor<'th'>> = props => {
-  return <th {...styles.header()} {...props} />
+interface TableHeaderProps extends HTMLPropsFor<'th'> {
+  sort?: boolean | ValueOf<typeof sorts>
+}
+const TableHeader: React.FC<TableHeaderProps> = props => {
+  const { children, sort, ...rest } = props
+  const sortable = isDefined(sort)
+  const sorted = !isBoolean(sort)
+
+  let Icon = SortIcon
+  if (sorted) Icon = sort === sorts.desc ? SortDescIcon : SortAscIcon
+
+  return (
+    <th {...styles.header()} {...rest}>
+      {children}
+      {sortable && <Icon />}
+    </th>
+  )
 }
 TableHeader.displayName = 'Table.Header'
 
@@ -73,5 +93,8 @@ Table.Cell = TableCell
 Table.Head = TableHead
 Table.Header = TableHeader
 Table.Row = TableRow
+
+const isBoolean = (val: unknown) => typeof val === 'boolean'
+const isDefined = (val: unknown) => typeof val !== 'undefined'
 
 export default Table
