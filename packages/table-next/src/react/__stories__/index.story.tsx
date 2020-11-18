@@ -1,6 +1,7 @@
 import React from 'react'
-import { Meta } from '@storybook/react/types-6-0'
+import { Meta, Story } from '@storybook/react/types-6-0'
 
+import { generateUser } from './seed'
 import Table from '..'
 
 export default {
@@ -8,48 +9,28 @@ export default {
   component: Table
 } as Meta
 
-export const Basic: React.FC = () => (
-  <Table>
-    <Table.Head>
-      <Table.Row>
-        <Table.Header>1</Table.Header>
-        <Table.Header>2</Table.Header>
-        <Table.Header>3</Table.Header>
-        <Table.Header>4</Table.Header>
-        <Table.Header>5</Table.Header>
-        <Table.Header>6</Table.Header>
-        <Table.Header>7</Table.Header>
-      </Table.Row>
-    </Table.Head>
+export const Basic: Story = () => {
+  const data = new Array(5).fill(null).map(() => generateUser())
 
-    <Table.Body>
-      <Table.Row>
-        <Table.Cell>1</Table.Cell>
-        <Table.Cell>2</Table.Cell>
-        <Table.Cell>3</Table.Cell>
-        <Table.Cell>4</Table.Cell>
-        <Table.Cell>5</Table.Cell>
-        <Table.Cell>6</Table.Cell>
-        <Table.Cell>7</Table.Cell>
-      </Table.Row>
-      <Table.Row>
-        <Table.Cell>1</Table.Cell>
-        <Table.Cell>2</Table.Cell>
-        <Table.Cell>3</Table.Cell>
-        <Table.Cell>4</Table.Cell>
-        <Table.Cell>5</Table.Cell>
-        <Table.Cell>6</Table.Cell>
-        <Table.Cell>7</Table.Cell>
-      </Table.Row>
-      <Table.Row>
-        <Table.Cell>1</Table.Cell>
-        <Table.Cell>2</Table.Cell>
-        <Table.Cell>3</Table.Cell>
-        <Table.Cell>4</Table.Cell>
-        <Table.Cell>5</Table.Cell>
-        <Table.Cell>6</Table.Cell>
-        <Table.Cell>7</Table.Cell>
-      </Table.Row>
-    </Table.Body>
-  </Table>
-)
+  return (
+    <Table>
+      <Table.Head>
+        <Table.Row>
+          <Table.Header>first name</Table.Header>
+          <Table.Header>last name</Table.Header>
+          <Table.Header>email</Table.Header>
+        </Table.Row>
+      </Table.Head>
+
+      <Table.Body>
+        {data.map((user, i) => (
+          <Table.Row key={i}>
+            <Table.Cell>{user.firstName}</Table.Cell>
+            <Table.Cell>{user.lastName}</Table.Cell>
+            <Table.Cell>{user.email}</Table.Cell>
+          </Table.Row>
+        ))}
+      </Table.Body>
+    </Table>
+  )
+}

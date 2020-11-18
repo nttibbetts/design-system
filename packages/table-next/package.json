@@ -24,7 +24,9 @@
   "dependencies": {
     "@pluralsight/ps-design-system-core": "*",
     "@pluralsight/ps-design-system-util": "*",
-    "@types/faker": "^5.1.4"
+    "@types/faker": "^5.1.4",
+    "@types/match-sorter": "^5.0.0",
+    "match-sorter": "^5.0.0"
   },
   "peerDependencies": {
     "@pluralsight/ps-design-system-normalize": "^4.0.0",
@@ -34,7 +36,9 @@
   },
   "devDependencies": {
     "@pluralsight/ps-design-system-build": "*",
+    "@pluralsight/ps-design-system-searchinput": "*",
     "@pluralsight/ps-design-system-storybook-preset": "*",
+    "@pluralsight/ps-design-system-text": "*",
     "@types/react-table": "^7.0.25",
     "faker": "^5.1.0",
     "react-table": "^7.6.2"

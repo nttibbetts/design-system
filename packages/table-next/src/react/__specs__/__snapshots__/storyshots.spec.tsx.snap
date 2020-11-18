@@ -13,37 +13,17 @@ exports[`Storyshots Components/Table Basic 1`] = `
       <th
         data-css-1268me8=""
       >
-        1
+        first name
       </th>
       <th
         data-css-1268me8=""
       >
-        2
+        last name
       </th>
       <th
         data-css-1268me8=""
       >
-        3
-      </th>
-      <th
-        data-css-1268me8=""
-      >
-        4
-      </th>
-      <th
-        data-css-1268me8=""
-      >
-        5
-      </th>
-      <th
-        data-css-1268me8=""
-      >
-        6
-      </th>
-      <th
-        data-css-1268me8=""
-      >
-        7
+        email
       </th>
     </tr>
   </thead>
@@ -56,37 +36,17 @@ exports[`Storyshots Components/Table Basic 1`] = `
       <td
         data-css-2zzudi=""
       >
-        1
+        Braulio
       </td>
       <td
         data-css-2zzudi=""
       >
-        2
+        Rempel
       </td>
       <td
         data-css-2zzudi=""
       >
-        3
-      </td>
-      <td
-        data-css-2zzudi=""
-      >
-        4
-      </td>
-      <td
-        data-css-2zzudi=""
-      >
-        5
-      </td>
-      <td
-        data-css-2zzudi=""
-      >
-        6
-      </td>
-      <td
-        data-css-2zzudi=""
-      >
-        7
+        Barton67@hotmail.com
       </td>
     </tr>
     <tr
@@ -95,37 +55,17 @@ exports[`Storyshots Components/Table Basic 1`] = `
       <td
         data-css-2zzudi=""
       >
-        1
+        Harmony
       </td>
       <td
         data-css-2zzudi=""
       >
-        2
+        Gerlach
       </td>
       <td
         data-css-2zzudi=""
       >
-        3
-      </td>
-      <td
-        data-css-2zzudi=""
-      >
-        4
-      </td>
-      <td
-        data-css-2zzudi=""
-      >
-        5
-      </td>
-      <td
-        data-css-2zzudi=""
-      >
-        6
-      </td>
-      <td
-        data-css-2zzudi=""
-      >
-        7
+        Van24@hotmail.com
       </td>
     </tr>
     <tr
@@ -134,41 +74,940 @@ exports[`Storyshots Components/Table Basic 1`] = `
       <td
         data-css-2zzudi=""
       >
-        1
+        Darrel
       </td>
       <td
         data-css-2zzudi=""
       >
-        2
+        Dooley
       </td>
       <td
         data-css-2zzudi=""
       >
-        3
+        Earlene_Bradtke@gmail.com
+      </td>
+    </tr>
+    <tr
+      data-css-17h080x=""
+    >
+      <td
+        data-css-2zzudi=""
+      >
+        May
       </td>
       <td
         data-css-2zzudi=""
       >
-        4
+        Halvorson
       </td>
       <td
         data-css-2zzudi=""
       >
-        5
+        Natalie39@hotmail.com
+      </td>
+    </tr>
+    <tr
+      data-css-17h080x=""
+    >
+      <td
+        data-css-2zzudi=""
+      >
+        Bertrand
       </td>
       <td
         data-css-2zzudi=""
       >
-        6
+        Stiedemann
       </td>
       <td
         data-css-2zzudi=""
       >
-        7
+        Carleton.Ryan73@gmail.com
       </td>
     </tr>
   </tbody>
 </table>
+`;
+
+exports[`Storyshots Components/Table/react-table Filtering 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "padding": 40,
+      }
+    }
+  >
+    <p
+      data-css-1djw98v=""
+      style={
+        Object {
+          "marginRight": 10,
+        }
+      }
+    >
+      Search:
+    </p>
+    <label
+      data-css-w0yocm=""
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <div
+        data-css-1r967oi=""
+      >
+        <div
+          data-css-ctre2o=""
+        >
+          <div
+            data-css-1c5qy71=""
+          >
+            <input
+              data-css-r2g0l1=""
+              data-css-r9d4vy=""
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              style={
+                Object {
+                  "flex": 1,
+                }
+              }
+              type="search"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          data-css-1os68q9=""
+        >
+          <div
+            data-css-7dab2f=""
+          >
+            <svg
+              aria-label="search icon"
+              role="img"
+              viewBox="0 0 24 24"
+            >
+              <path
+                clipRule="evenodd"
+                d="M21.353 20.648a.5.5 0 000-.708l-5.039-5.04A7.928 7.928 0 0018 10a7.948 7.948 0 00-2.344-5.656A7.942 7.942 0 0010 2a7.94 7.94 0 00-5.656 2.344A7.944 7.944 0 002 10a7.94 7.94 0 002.344 5.656A7.94 7.94 0 0010 18a7.926 7.926 0 004.9-1.685l5.04 5.04a.5.5 0 00.707 0l.706-.707zm-7.111-6.405A5.96 5.96 0 0110 16a5.959 5.959 0 01-4.242-1.757A5.958 5.958 0 014 10c0-1.602.624-3.109 1.758-4.242A5.955 5.955 0 0110 4c1.602 0 3.109.624 4.242 1.758A5.957 5.957 0 0116 10c0 1.603-.624 3.11-1.758 4.243z"
+                fillRule="evenodd"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </label>
+  </div>,
+  <table
+    data-css-1wtopc0=""
+    role="table"
+  >
+    <thead
+      data-css-1268me8=""
+    >
+      <tr
+        data-css-17h080x=""
+        role="row"
+      >
+        <th
+          colSpan={1}
+          data-css-1268me8=""
+          role="columnheader"
+        >
+          First Name
+          <label
+            data-css-w0yocm=""
+          >
+            <div
+              data-css-1r967oi=""
+            >
+              <div
+                data-css-ctre2o=""
+              >
+                <div
+                  data-css-1c5qy71=""
+                >
+                  <input
+                    data-css-r2g0l1=""
+                    data-css-r9d4vy=""
+                    disabled={false}
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    type="search"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                data-css-1os68q9=""
+              >
+                <div
+                  data-css-7dab2f=""
+                >
+                  <svg
+                    aria-label="search icon"
+                    role="img"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      clipRule="evenodd"
+                      d="M21.353 20.648a.5.5 0 000-.708l-5.039-5.04A7.928 7.928 0 0018 10a7.948 7.948 0 00-2.344-5.656A7.942 7.942 0 0010 2a7.94 7.94 0 00-5.656 2.344A7.944 7.944 0 002 10a7.94 7.94 0 002.344 5.656A7.94 7.94 0 0010 18a7.926 7.926 0 004.9-1.685l5.04 5.04a.5.5 0 00.707 0l.706-.707zm-7.111-6.405A5.96 5.96 0 0110 16a5.959 5.959 0 01-4.242-1.757A5.958 5.958 0 014 10c0-1.602.624-3.109 1.758-4.242A5.955 5.955 0 0110 4c1.602 0 3.109.624 4.242 1.758A5.957 5.957 0 0116 10c0 1.603-.624 3.11-1.758 4.243z"
+                      fillRule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </label>
+        </th>
+        <th
+          colSpan={1}
+          data-css-1268me8=""
+          role="columnheader"
+        >
+          Last Name
+          <label
+            data-css-w0yocm=""
+          >
+            <div
+              data-css-1r967oi=""
+            >
+              <div
+                data-css-ctre2o=""
+              >
+                <div
+                  data-css-1c5qy71=""
+                >
+                  <input
+                    data-css-r2g0l1=""
+                    data-css-r9d4vy=""
+                    disabled={false}
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    type="search"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                data-css-1os68q9=""
+              >
+                <div
+                  data-css-7dab2f=""
+                >
+                  <svg
+                    aria-label="search icon"
+                    role="img"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      clipRule="evenodd"
+                      d="M21.353 20.648a.5.5 0 000-.708l-5.039-5.04A7.928 7.928 0 0018 10a7.948 7.948 0 00-2.344-5.656A7.942 7.942 0 0010 2a7.94 7.94 0 00-5.656 2.344A7.944 7.944 0 002 10a7.94 7.94 0 002.344 5.656A7.94 7.94 0 0010 18a7.926 7.926 0 004.9-1.685l5.04 5.04a.5.5 0 00.707 0l.706-.707zm-7.111-6.405A5.96 5.96 0 0110 16a5.959 5.959 0 01-4.242-1.757A5.958 5.958 0 014 10c0-1.602.624-3.109 1.758-4.242A5.955 5.955 0 0110 4c1.602 0 3.109.624 4.242 1.758A5.957 5.957 0 0116 10c0 1.603-.624 3.11-1.758 4.243z"
+                      fillRule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </label>
+        </th>
+        <th
+          colSpan={1}
+          data-css-1268me8=""
+          role="columnheader"
+        >
+          Courses
+          <label
+            data-css-w0yocm=""
+          >
+            <div
+              data-css-1r967oi=""
+            >
+              <div
+                data-css-ctre2o=""
+              >
+                <div
+                  data-css-1c5qy71=""
+                >
+                  <input
+                    data-css-r2g0l1=""
+                    data-css-r9d4vy=""
+                    disabled={false}
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    type="search"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                data-css-1os68q9=""
+              >
+                <div
+                  data-css-7dab2f=""
+                >
+                  <svg
+                    aria-label="search icon"
+                    role="img"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      clipRule="evenodd"
+                      d="M21.353 20.648a.5.5 0 000-.708l-5.039-5.04A7.928 7.928 0 0018 10a7.948 7.948 0 00-2.344-5.656A7.942 7.942 0 0010 2a7.94 7.94 0 00-5.656 2.344A7.944 7.944 0 002 10a7.94 7.94 0 002.344 5.656A7.94 7.94 0 0010 18a7.926 7.926 0 004.9-1.685l5.04 5.04a.5.5 0 00.707 0l.706-.707zm-7.111-6.405A5.96 5.96 0 0110 16a5.959 5.959 0 01-4.242-1.757A5.958 5.958 0 014 10c0-1.602.624-3.109 1.758-4.242A5.955 5.955 0 0110 4c1.602 0 3.109.624 4.242 1.758A5.957 5.957 0 0116 10c0 1.603-.624 3.11-1.758 4.243z"
+                      fillRule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </label>
+        </th>
+        <th
+          colSpan={1}
+          data-css-1268me8=""
+          role="columnheader"
+        >
+          View Time
+          <label
+            data-css-w0yocm=""
+          >
+            <div
+              data-css-1r967oi=""
+            >
+              <div
+                data-css-ctre2o=""
+              >
+                <div
+                  data-css-1c5qy71=""
+                >
+                  <input
+                    data-css-r2g0l1=""
+                    data-css-r9d4vy=""
+                    disabled={false}
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    type="search"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                data-css-1os68q9=""
+              >
+                <div
+                  data-css-7dab2f=""
+                >
+                  <svg
+                    aria-label="search icon"
+                    role="img"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      clipRule="evenodd"
+                      d="M21.353 20.648a.5.5 0 000-.708l-5.039-5.04A7.928 7.928 0 0018 10a7.948 7.948 0 00-2.344-5.656A7.942 7.942 0 0010 2a7.94 7.94 0 00-5.656 2.344A7.944 7.944 0 002 10a7.94 7.94 0 002.344 5.656A7.94 7.94 0 0010 18a7.926 7.926 0 004.9-1.685l5.04 5.04a.5.5 0 00.707 0l.706-.707zm-7.111-6.405A5.96 5.96 0 0110 16a5.959 5.959 0 01-4.242-1.757A5.958 5.958 0 014 10c0-1.602.624-3.109 1.758-4.242A5.955 5.955 0 0110 4c1.602 0 3.109.624 4.242 1.758A5.957 5.957 0 0116 10c0 1.603-.624 3.11-1.758 4.243z"
+                      fillRule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </label>
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      data-css-1268me8=""
+      role="rowgroup"
+    >
+      <tr
+        data-css-17h080x=""
+        role="row"
+      >
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Alize
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Anderson
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          28
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          478
+        </td>
+      </tr>
+      <tr
+        data-css-17h080x=""
+        role="row"
+      >
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Darien
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Koss
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          15
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          959
+        </td>
+      </tr>
+      <tr
+        data-css-17h080x=""
+        role="row"
+      >
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Buddy
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Abernathy
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          7
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          308
+        </td>
+      </tr>
+      <tr
+        data-css-17h080x=""
+        role="row"
+      >
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Germaine
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Kohler
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          2
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          94
+        </td>
+      </tr>
+      <tr
+        data-css-17h080x=""
+        role="row"
+      >
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Pattie
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Hamill
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          24
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          800
+        </td>
+      </tr>
+      <tr
+        data-css-17h080x=""
+        role="row"
+      >
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Dashawn
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Senger
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          29
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          839
+        </td>
+      </tr>
+      <tr
+        data-css-17h080x=""
+        role="row"
+      >
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Jerald
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Ratke
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          15
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          719
+        </td>
+      </tr>
+      <tr
+        data-css-17h080x=""
+        role="row"
+      >
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Waldo
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Howell
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          11
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          360
+        </td>
+      </tr>
+      <tr
+        data-css-17h080x=""
+        role="row"
+      >
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Polly
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Bins
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          12
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          868
+        </td>
+      </tr>
+      <tr
+        data-css-17h080x=""
+        role="row"
+      >
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Percy
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Mitchell
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          14
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          56
+        </td>
+      </tr>
+      <tr
+        data-css-17h080x=""
+        role="row"
+      >
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Bridget
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Purdy
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          5
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          204
+        </td>
+      </tr>
+      <tr
+        data-css-17h080x=""
+        role="row"
+      >
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Morgan
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Rosenbaum
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          7
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          943
+        </td>
+      </tr>
+      <tr
+        data-css-17h080x=""
+        role="row"
+      >
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Murray
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Schulist
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          0
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          816
+        </td>
+      </tr>
+      <tr
+        data-css-17h080x=""
+        role="row"
+      >
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Selina
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Bins
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          19
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          833
+        </td>
+      </tr>
+      <tr
+        data-css-17h080x=""
+        role="row"
+      >
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Julia
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Aufderhar
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          3
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          714
+        </td>
+      </tr>
+      <tr
+        data-css-17h080x=""
+        role="row"
+      >
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Alexandra
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Hayes
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          2
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          967
+        </td>
+      </tr>
+      <tr
+        data-css-17h080x=""
+        role="row"
+      >
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Kailyn
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Schmeler
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          7
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          869
+        </td>
+      </tr>
+      <tr
+        data-css-17h080x=""
+        role="row"
+      >
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Freeda
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Muller
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          19
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          745
+        </td>
+      </tr>
+      <tr
+        data-css-17h080x=""
+        role="row"
+      >
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Willie
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Hilpert
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          19
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          416
+        </td>
+      </tr>
+      <tr
+        data-css-17h080x=""
+        role="row"
+      >
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Antwan
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          Nicolas
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          28
+        </td>
+        <td
+          data-css-2zzudi=""
+          role="cell"
+        >
+          848
+        </td>
+      </tr>
+    </tbody>
+  </table>,
+]
 `;
 
 exports[`Storyshots Components/Table/react-table Sorting 1`] = `
@@ -305,54 +1144,25 @@ exports[`Storyshots Components/Table/react-table Sorting 1`] = `
         data-css-2zzudi=""
         role="cell"
       >
-        Neoma
+        Monica
       </td>
       <td
         data-css-2zzudi=""
         role="cell"
       >
-        Wilderman
+        Stanton
       </td>
       <td
         data-css-2zzudi=""
         role="cell"
       >
-        21
+        3
       </td>
       <td
         data-css-2zzudi=""
         role="cell"
       >
-        336
-      </td>
-    </tr>
-    <tr
-      data-css-17h080x=""
-      role="row"
-    >
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        Bailey
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        Koepp
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        0
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        508
+        340
       </td>
     </tr>
     <tr
@@ -363,187 +1173,13 @@ exports[`Storyshots Components/Table/react-table Sorting 1`] = `
         data-css-2zzudi=""
         role="cell"
       >
-        May
+        Jude
       </td>
       <td
         data-css-2zzudi=""
         role="cell"
       >
-        Halvorson
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        7
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        293
-      </td>
-    </tr>
-    <tr
-      data-css-17h080x=""
-      role="row"
-    >
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        Bernita
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        Runolfsson
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        4
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        247
-      </td>
-    </tr>
-    <tr
-      data-css-17h080x=""
-      role="row"
-    >
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        Clint
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        Walsh
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        29
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        910
-      </td>
-    </tr>
-    <tr
-      data-css-17h080x=""
-      role="row"
-    >
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        Krystal
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        Gorczany
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        9
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        326
-      </td>
-    </tr>
-    <tr
-      data-css-17h080x=""
-      role="row"
-    >
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        Domenica
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        Lockman
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        14
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        754
-      </td>
-    </tr>
-    <tr
-      data-css-17h080x=""
-      role="row"
-    >
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        Arch
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        Rohan
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        12
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        775
-      </td>
-    </tr>
-    <tr
-      data-css-17h080x=""
-      role="row"
-    >
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        Lottie
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        Cremin
+        Lesch
       </td>
       <td
         data-css-2zzudi=""
@@ -555,7 +1191,7 @@ exports[`Storyshots Components/Table/react-table Sorting 1`] = `
         data-css-2zzudi=""
         role="cell"
       >
-        980
+        943
       </td>
     </tr>
     <tr
@@ -566,54 +1202,25 @@ exports[`Storyshots Components/Table/react-table Sorting 1`] = `
         data-css-2zzudi=""
         role="cell"
       >
-        Kelley
+        Sibyl
       </td>
       <td
         data-css-2zzudi=""
         role="cell"
       >
-        Harvey
+        Halvorson
       </td>
       <td
         data-css-2zzudi=""
         role="cell"
       >
-        25
+        8
       </td>
       <td
         data-css-2zzudi=""
         role="cell"
       >
-        903
-      </td>
-    </tr>
-    <tr
-      data-css-17h080x=""
-      role="row"
-    >
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        Aglae
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        Kilback
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        22
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        299
+        627
       </td>
     </tr>
     <tr
@@ -624,54 +1231,25 @@ exports[`Storyshots Components/Table/react-table Sorting 1`] = `
         data-css-2zzudi=""
         role="cell"
       >
-        Olen
+        Nasir
       </td>
       <td
         data-css-2zzudi=""
         role="cell"
       >
-        Marks
+        Swaniawski
       </td>
       <td
         data-css-2zzudi=""
         role="cell"
       >
-        29
+        12
       </td>
       <td
         data-css-2zzudi=""
         role="cell"
       >
-        420
-      </td>
-    </tr>
-    <tr
-      data-css-17h080x=""
-      role="row"
-    >
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        Magnus
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        Torp
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        17
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        164
+        369
       </td>
     </tr>
     <tr
@@ -682,19 +1260,13 @@ exports[`Storyshots Components/Table/react-table Sorting 1`] = `
         data-css-2zzudi=""
         role="cell"
       >
-        Hipolito
+        Einar
       </td>
       <td
         data-css-2zzudi=""
         role="cell"
       >
-        Simonis
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        22
+        Block
       </td>
       <td
         data-css-2zzudi=""
@@ -702,34 +1274,11 @@ exports[`Storyshots Components/Table/react-table Sorting 1`] = `
       >
         16
       </td>
-    </tr>
-    <tr
-      data-css-17h080x=""
-      role="row"
-    >
       <td
         data-css-2zzudi=""
         role="cell"
       >
-        Providenci
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        Kuvalis
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        20
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        359
+        1
       </td>
     </tr>
     <tr
@@ -740,13 +1289,13 @@ exports[`Storyshots Components/Table/react-table Sorting 1`] = `
         data-css-2zzudi=""
         role="cell"
       >
-        Vladimir
+        Grayson
       </td>
       <td
         data-css-2zzudi=""
         role="cell"
       >
-        Dickens
+        Glover
       </td>
       <td
         data-css-2zzudi=""
@@ -758,7 +1307,7 @@ exports[`Storyshots Components/Table/react-table Sorting 1`] = `
         data-css-2zzudi=""
         role="cell"
       >
-        739
+        403
       </td>
     </tr>
     <tr
@@ -769,54 +1318,25 @@ exports[`Storyshots Components/Table/react-table Sorting 1`] = `
         data-css-2zzudi=""
         role="cell"
       >
-        Jovani
+        Sandy
       </td>
       <td
         data-css-2zzudi=""
         role="cell"
       >
-        Donnelly
+        Huels
       </td>
       <td
         data-css-2zzudi=""
         role="cell"
       >
-        4
+        17
       </td>
       <td
         data-css-2zzudi=""
         role="cell"
       >
-        883
-      </td>
-    </tr>
-    <tr
-      data-css-17h080x=""
-      role="row"
-    >
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        Dixie
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        Williamson
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        22
-      </td>
-      <td
-        data-css-2zzudi=""
-        role="cell"
-      >
-        798
+        792
       </td>
     </tr>
     <tr
@@ -827,25 +1347,25 @@ exports[`Storyshots Components/Table/react-table Sorting 1`] = `
         data-css-2zzudi=""
         role="cell"
       >
-        Forrest
+        Skye
       </td>
       <td
         data-css-2zzudi=""
         role="cell"
       >
-        Beatty
+        Rath
       </td>
       <td
         data-css-2zzudi=""
         role="cell"
       >
-        16
+        0
       </td>
       <td
         data-css-2zzudi=""
         role="cell"
       >
-        570
+        786
       </td>
     </tr>
     <tr
@@ -856,13 +1376,129 @@ exports[`Storyshots Components/Table/react-table Sorting 1`] = `
         data-css-2zzudi=""
         role="cell"
       >
-        Kelley
+        Sincere
       </td>
       <td
         data-css-2zzudi=""
         role="cell"
       >
-        Zulauf
+        Kohler
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        7
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        121
+      </td>
+    </tr>
+    <tr
+      data-css-17h080x=""
+      role="row"
+    >
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        Kyra
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        Gerhold
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        5
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        861
+      </td>
+    </tr>
+    <tr
+      data-css-17h080x=""
+      role="row"
+    >
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        Johnny
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        Abernathy
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        13
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        292
+      </td>
+    </tr>
+    <tr
+      data-css-17h080x=""
+      role="row"
+    >
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        Colton
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        King
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        24
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        633
+      </td>
+    </tr>
+    <tr
+      data-css-17h080x=""
+      role="row"
+    >
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        Evans
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        Windler
       </td>
       <td
         data-css-2zzudi=""
@@ -874,7 +1510,210 @@ exports[`Storyshots Components/Table/react-table Sorting 1`] = `
         data-css-2zzudi=""
         role="cell"
       >
-        717
+        521
+      </td>
+    </tr>
+    <tr
+      data-css-17h080x=""
+      role="row"
+    >
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        Sammie
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        Harris
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        6
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        624
+      </td>
+    </tr>
+    <tr
+      data-css-17h080x=""
+      role="row"
+    >
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        Breana
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        Reinger
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        8
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        823
+      </td>
+    </tr>
+    <tr
+      data-css-17h080x=""
+      role="row"
+    >
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        Isai
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        White
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        0
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        213
+      </td>
+    </tr>
+    <tr
+      data-css-17h080x=""
+      role="row"
+    >
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        Maye
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        McGlynn
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        13
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        430
+      </td>
+    </tr>
+    <tr
+      data-css-17h080x=""
+      role="row"
+    >
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        Lonny
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        Vandervort
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        16
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        121
+      </td>
+    </tr>
+    <tr
+      data-css-17h080x=""
+      role="row"
+    >
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        Cameron
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        Nienow
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        12
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        385
+      </td>
+    </tr>
+    <tr
+      data-css-17h080x=""
+      role="row"
+    >
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        Savannah
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        Ziemann
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        30
+      </td>
+      <td
+        data-css-2zzudi=""
+        role="cell"
+      >
+        756
       </td>
     </tr>
   </tbody>
