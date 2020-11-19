@@ -16,7 +16,7 @@ import { HTMLPropsFor } from '@pluralsight/ps-design-system-util'
 
 import SearchInput from '@pluralsight/ps-design-system-searchinput'
 import { Meta, Story } from '@storybook/react/types-6-0'
-import React, { useMemo } from 'react'
+import React, { useCallback, useMemo } from 'react'
 import {
   CellProps,
   HeaderProps,
@@ -37,7 +37,7 @@ export default {
   component: Table,
   decorators: [
     Story => (
-      <div style={{ padding: '30px 10px 200px' }}>
+      <div style={{ padding: '30px 10px' }}>
         <Story />
       </div>
     )
@@ -172,12 +172,12 @@ export const KitchenSink: Story = () => {
   const columns = useMemo(
     () => [
       {
-        Cell: ({ cell }: any) => {
+        Cell: ({ cell }: CellProps<any>) => {
           const { user } = cell.row.original
 
           return (
             <FlexContainer>
-              <Avatar alt="avatar" name={`${user.firstName}`} size="xSmall" />
+              <Avatar alt="avatar" name={user.firstName} size="xSmall" />
               <HorzSpacer />
               <span>{String(cell.value)}</span>
             </FlexContainer>
@@ -194,7 +194,7 @@ export const KitchenSink: Story = () => {
 
   const data = useMemo(() => generateUserCourseViews(2500), []) as any
 
-  const selectionHook = (hooks: Hooks<any>) => {
+  const selectionHook = useCallback((hooks: Hooks<any>) => {
     hooks.visibleColumns.push(columns => [
       {
         id: '_selection',
@@ -208,7 +208,7 @@ export const KitchenSink: Story = () => {
       },
       ...columns
     ])
-  }
+  }, [])
 
   const plugins = [useGlobalFilter, useSortBy, usePagination, useRowSelect]
   const hooks = [selectionHook]
@@ -262,7 +262,7 @@ export const KitchenSink: Story = () => {
             table.prepareRow(row)
 
             return (
-              <Table.Row {...row.getRowProps()}>
+              <Table.Row selected={row.isSelected} {...row.getRowProps()}>
                 {row.cells.map(cell => (
                   <Table.Cell {...cell.getCellProps()}>
                     {cell.render('Cell')}
