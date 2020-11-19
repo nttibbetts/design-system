@@ -39,6 +39,7 @@ export default {
     fontSize: type.fontSizeSmall,
     fontWeight: type.fontWeightBook,
     lineHeight: type.lineHeightTight,
+    marginBottom: layout.spacingMedium,
     verticalAlign: 'middle',
     width: '100%',
 
