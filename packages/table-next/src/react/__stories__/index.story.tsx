@@ -227,35 +227,6 @@ export const RowSelection: Story = () => {
   )
 }
 
-export const StickyHeader: Story = () => {
-  const data = new Array(300).fill(null).map(() => generateUser())
-
-  return (
-    <div style={{ padding: '50px 20px' }}>
-      <Table>
-        <Table.Head>
-          <Table.Row sticky>
-            <Table.Header>First name</Table.Header>
-            <Table.Header>Last name</Table.Header>
-            <Table.Header>Email</Table.Header>
-          </Table.Row>
-        </Table.Head>
-
-        <Table.Body>
-          {data.map((user, i) => (
-            <Table.Row key={i}>
-              <Table.Header>{user.firstName}</Table.Header>
-              <Table.Cell>{user.lastName}</Table.Cell>
-              <Table.Cell>{user.email}</Table.Cell>
-            </Table.Row>
-          ))}
-        </Table.Body>
-      </Table>
-    </div>
-  )
-}
-StickyHeader.parameters = { center: { disabled: true } }
-
 const HorzSpacer: React.FC = props => (
   <div style={{ height: '100%', width: layout.spacingSmall }} {...props} />
 )

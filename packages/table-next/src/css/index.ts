@@ -17,7 +17,7 @@ export default {
   '.psds-table__container': {
     label: 'table__container',
 
-    // overflowX: 'auto',
+    overflowX: 'auto',
     width: '100%'
   },
 
@@ -25,7 +25,6 @@ export default {
     label: 'table',
 
     '--table-border-color': 'transparent',
-    '--table-header-sticky-bg': 'transparent',
     '--table-row-hover-color': 'transparent',
     '--table-row-selected-color': 'transparent',
     '--table-text-color': 'initial',
@@ -48,7 +47,6 @@ export default {
   },
   [`.psds-table${dark}`]: {
     '--table-border-color': colorsBorder.lowOnDark,
-    '--table-header-sticky-bg': colorsBackgroundDark[3],
     '--table-text-color': colorsTextIcon.highOnDark,
     '--table-text-heading-color': colorsTextIcon.lowOnDark,
     '--table-text-heading-color-hover': colorsTextIcon.highOnDark,
@@ -57,7 +55,6 @@ export default {
   },
   [`.psds-table${light}`]: {
     '--table-border-color': colorsBorder.lowOnLight,
-    '--table-header-sticky-bg': colorsBackgroundLight[1],
     '--table-text-color': colorsTextIcon.highOnLight,
     '--table-text-heading-color': colorsTextIcon.lowOnLight,
     '--table-text-heading-color-hover': colorsTextIcon.highOnLight,
@@ -128,14 +125,6 @@ export default {
   '.psds-table__row--selected': {
     '& > th, & > td': {
       backgroundColor: 'var(--table-row-selected-color)'
-    }
-  },
-  '.psds-table__row--sticky': {
-    '& > th, & > td': {
-      backgroundColor: 'var(--table-header-sticky-bg)',
-      boxShadow: '0 1px 0 var(--table-border-color)',
-      position: 'sticky',
-      top: 0
     }
   }
 }

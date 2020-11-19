@@ -35,12 +35,11 @@ const styles = {
       opts.sortable && css(stylesheet['.psds-table__header--sortable'])
     ),
   sortIcon: () => css(stylesheet['.psds-table__header__sort-icon']),
-  row: (opts: { expanded: boolean; selected: boolean; sticky: boolean }) =>
+  row: (opts: { expanded: boolean; selected: boolean }) =>
     compose(
       css(stylesheet['.psds-table__row']),
       !opts.expanded && css(stylesheet['.psds-table__row--collapsed']),
-      opts.selected && css(stylesheet['.psds-table__row--selected']),
-      opts.sticky && css(stylesheet['.psds-table__row--sticky'])
+      opts.selected && css(stylesheet['.psds-table__row--selected'])
     )
 }
 
@@ -111,11 +110,10 @@ TableHeader.displayName = 'Table.Header'
 interface TableRowProps extends HTMLPropsFor<'tr'> {
   expanded?: boolean
   selected?: boolean
-  sticky?: boolean
 }
 const TableRow: React.FC<TableRowProps> = props => {
-  const { expanded = true, selected = false, sticky = false, ...rest } = props
-  return <tr {...styles.row({ expanded, selected, sticky })} {...rest} />
+  const { expanded = true, selected = false, ...rest } = props
+  return <tr {...styles.row({ expanded, selected })} {...rest} />
 }
 TableRow.displayName = 'Table.Row'
 
