@@ -15,6 +15,7 @@ import stylesheet from '../css'
 import { aligns, sorts } from '../vars'
 
 const styles = {
+  container: () => css(stylesheet['.psds-table__container']),
   table: (themeName: ValueOf<typeof themeNames>) =>
     compose(
       css(stylesheet['.psds-table']),
@@ -27,8 +28,20 @@ const styles = {
       css(stylesheet[`.psds-table__cell--align-${opts.align}`])
     ),
   head: () => css(stylesheet['.psds-table__head']),
-  header: () => css(stylesheet['.psds-table__header']),
-  row: () => css(stylesheet['.psds-table__row'])
+  header: (opts: { align: ValueOf<typeof aligns>; sortable: boolean }) =>
+    compose(
+      css(stylesheet['.psds-table__header']),
+      css(stylesheet[`.psds-table__header--align-${opts.align}`]),
+      opts.sortable && css(stylesheet['.psds-table__header--sortable'])
+    ),
+  sortIcon: () => css(stylesheet['.psds-table__header__sort-icon']),
+  row: (opts: { expanded: boolean; selected: boolean; sticky: boolean }) =>
+    compose(
+      css(stylesheet['.psds-table__row']),
+      !opts.expanded && css(stylesheet['.psds-table__row--collapsed']),
+      opts.selected && css(stylesheet['.psds-table__row--selected']),
+      opts.sticky && css(stylesheet['.psds-table__row--sticky'])
+    )
 }
 
 interface TableStatics {
@@ -39,10 +52,21 @@ interface TableStatics {
   Row: typeof TableRow
 }
 
-const Table: React.FC<HTMLPropsFor<'table'>> & TableStatics = props => {
-  const themeName = useTheme()
-  return <table {...styles.table(themeName)} {...props} />
+interface TableProps extends HTMLPropsFor<'table'> {
+  renderContainer?: React.FC
 }
+const Table: React.FC<TableProps> & TableStatics = props => {
+  const { renderContainer: Container = defaultRenderContainer, ...rest } = props
+  const themeName = useTheme()
+
+  return (
+    <Container {...styles.container()}>
+      <table {...styles.table(themeName)} {...rest} />
+    </Container>
+  )
+}
+
+const defaultRenderContainer: React.FC = props => <div {...props} />
 
 const TableBody: React.FC<HTMLPropsFor<'tbody'>> = props => {
   return <tbody {...styles.body()} {...props} />
@@ -64,10 +88,11 @@ const TableHead: React.FC<HTMLPropsFor<'thead'>> = props => {
 TableHead.displayName = 'Table.Head'
 
 interface TableHeaderProps extends HTMLPropsFor<'th'> {
+  align?: ValueOf<typeof aligns>
   sort?: boolean | ValueOf<typeof sorts>
 }
 const TableHeader: React.FC<TableHeaderProps> = props => {
-  const { children, sort, ...rest } = props
+  const { align = aligns.left, children, sort, ...rest } = props
   const sortable = isDefined(sort)
   const sorted = !isBoolean(sort)
 
@@ -75,16 +100,22 @@ const TableHeader: React.FC<TableHeaderProps> = props => {
   if (sorted) Icon = sort === sorts.desc ? SortDescIcon : SortAscIcon
 
   return (
-    <th {...styles.header()} {...rest}>
+    <th {...styles.header({ align, sortable })} {...rest}>
       {children}
-      {sortable && <Icon />}
+      {sortable && <Icon {...styles.sortIcon()} />}
     </th>
   )
 }
 TableHeader.displayName = 'Table.Header'
 
-const TableRow: React.FC<HTMLPropsFor<'tr'>> = props => {
-  return <tr {...styles.row()} {...props} />
+interface TableRowProps extends HTMLPropsFor<'tr'> {
+  expanded?: boolean
+  selected?: boolean
+  sticky?: boolean
+}
+const TableRow: React.FC<TableRowProps> = props => {
+  const { expanded = true, selected = false, sticky = false, ...rest } = props
+  return <tr {...styles.row({ expanded, selected, sticky })} {...rest} />
 }
 TableRow.displayName = 'Table.Row'
 

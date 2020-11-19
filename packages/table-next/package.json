@@ -23,6 +23,7 @@
   "types": "dist/esm/index.d.ts",
   "dependencies": {
     "@pluralsight/ps-design-system-core": "*",
+    "@pluralsight/ps-design-system-icon": "*",
     "@pluralsight/ps-design-system-util": "*",
     "@types/faker": "^5.1.4"
   },
@@ -33,7 +34,10 @@
     "react": ">=16.8.6 < 17.0.0"
   },
   "devDependencies": {
+    "@pluralsight/ps-design-system-avatar": "*",
+    "@pluralsight/ps-design-system-button": "*",
     "@pluralsight/ps-design-system-build": "*",
+    "@pluralsight/ps-design-system-checkbox": "*",
     "@pluralsight/ps-design-system-searchinput": "*",
     "@pluralsight/ps-design-system-storybook-preset": "*",
     "@pluralsight/ps-design-system-text": "*",
